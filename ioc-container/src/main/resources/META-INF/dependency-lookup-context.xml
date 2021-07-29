@@ -4,18 +4,25 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="user" class="org.cxy.springdemo.ioc.container.domain.User">
+
+    <bean id="user" class="org.cxy.springdemo.business.domain.User">
         <property name="id" value="1"/>
         <property name="name" value="cxy"/>
     </bean>
 
+    <bean id="userRepository1" class="org.cxy.springdemo.business.repository.UserRepositoryImpl1"/>
 
-    <bean id="objectFactory" class="org.springframework.beans.factory.config.ObjectFactoryCreatingFactoryBean">
-        <property name="targetBeanName" value="user"/>
-    </bean>
+    <bean id="userRepository2" class="org.cxy.springdemo.business.repository.UserRepositoryImpl2"/>
+
+    <bean id="userRepository3" class="org.cxy.springdemo.business.repository.UserRepositoryImpl3"/>
 
 
-    <bean id="root" class="org.cxy.springdemo.ioc.container.domain.Root" parent="user" primary="true">
+    <!--    <bean id="objectFactory" class="org.springframework.beans.factory.config.ObjectFactoryCreatingFactoryBean">-->
+<!--        <property name="targetBeanName" value="user"/>-->
+<!--    </bean>-->
+
+
+    <bean id="root" class="org.cxy.springdemo.business.domain.Root" parent="user" primary="true">
         <property name="address" value="nj"/>
     </bean>
 

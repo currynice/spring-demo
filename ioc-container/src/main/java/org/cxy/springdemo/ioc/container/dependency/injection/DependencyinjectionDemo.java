@@ -1,16 +1,12 @@
 package org.cxy.springdemo.ioc.container.dependency.injection;
 
 
-import org.cxy.springdemo.ioc.container.annotation.Super;
-import org.cxy.springdemo.ioc.container.domain.User;
-import org.cxy.springdemo.ioc.container.repository.UserRepository;
+import org.cxy.springdemo.business.domain.Book;
+import org.cxy.springdemo.business.domain.ComplexObject;
+import org.cxy.springdemo.business.domain.User;
 import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.ListableBeanFactory;
-import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import java.util.Map;
 
 /**
  * 依赖注入示例
@@ -20,16 +16,26 @@ public class DependencyinjectionDemo {
 
     public static void main(String[] args) {
         //配置XML文件，启动 Spring 应用上下文 2
-        BeanFactory beanFactory = new ClassPathXmlApplicationContext("classpath:/META-INF/dependency-injection-context.xml");
+//        BeanFactory beanFactory = new ClassPathXmlApplicationContext("classpath:/META-INF/dependency-injection-context.xml");
+//
+//        User user = (User)beanFactory.getBean("user");
+//        System.out.println(user);
 
-//        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:/META-INF/dependency-injection-context.xml");
+        beanComplexInject();
 
-        UserRepository userRepository = beanFactory.getBean("userRepository", UserRepository.class);
-
-        System.out.println(userRepository.getUsers());
+    }
 
 
+    /**
+     * xml 复杂注入
+     */
+    private static void beanComplexInject(){
 
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:/META-INF/bean-complex-inject-context.xml");
+
+        ComplexObject complexObject = ctx.getBean("complexObject",ComplexObject.class);
+
+        System.out.println(complexObject);
     }
 
 

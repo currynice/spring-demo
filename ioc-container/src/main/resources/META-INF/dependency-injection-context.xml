@@ -1,21 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:util="http://www.springframework.org/schema/util"
-       xsi:schemaLocation="
-        http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
-        http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
-    <!--复用-->
-    <import resource="dependency-lookup-context.xml"/>
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="userRepository" class="org.cxy.springdemo.ioc.container.repository.UserRepository"
-          autowire="byType"> <!-- Auto-Wiring -->
-        <!-- 手动配置 -->
-        <!--        <property name="users">-->
-        <!--            <util:list>-->
-        <!--                <ref bean="user"></ref>-->
-        <!--                <ref bean="root"></ref>-->
-        <!--            </util:list>-->
-        <!--        </property>-->
+    <!--激活使用占位符-->
+    <context:property-placeholder/>
+
+    <!--setter注入-->
+    <bean id="user" class="org.cxy.springdemo.business.domain.User">
+        <property name="id" value="${user.id}"/>
+        <property name="name" value="${user.name}"/>
     </bean>
+
+    <bean id="book" class="org.cxy.springdemo.business.domain.Book">
+        <property name="name" value="test-book"/>
+        <!-- ref引用上面的 user对象 -->
+        <property name="user" ref="user"/>
+    </bean>
+
+    <!--构造器注入-->
+    <bean id="user2" class="org.cxy.springdemo.business.domain.User">
+        <constructor-arg index="0" value="${user.id}"/>
+        <constructor-arg index="1" value="${user.name}"/>
+    </bean>
+
+
+
+
+
+
+<!--        <bean id="userRepository" class="org.cxy.springdemo.business.repository.UserRepository"-->
+<!--          autowire="byType"> &lt;!&ndash; Auto-Wiring &ndash;&gt;-->
+<!--        &lt;!&ndash; 手动配置 &ndash;&gt;-->
+<!--        &lt;!&ndash;        <property name="users">&ndash;&gt;-->
+<!--        &lt;!&ndash;            <util:list>&ndash;&gt;-->
+<!--        &lt;!&ndash;                <ref bean="user"></ref>&ndash;&gt;-->
+<!--        &lt;!&ndash;                <ref bean="root"></ref>&ndash;&gt;-->
+<!--        &lt;!&ndash;            </util:list>&ndash;&gt;-->
+<!--        &lt;!&ndash;        </property>&ndash;&gt;-->
+<!--    </bean>-->
 </beans>

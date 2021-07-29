@@ -1,9 +1,20 @@
-package org.cxy.springdemo.ioc.container.domain;
+package org.cxy.springdemo.business.domain;
 
 /**
  * 用户类
  */
 public class User {
+
+
+    public User() {
+
+    }
+
+
+    public User(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
     private String id;
 

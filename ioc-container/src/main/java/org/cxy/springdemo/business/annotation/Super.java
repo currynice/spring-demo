@@ -1,7 +1,5 @@
-package org.cxy.springdemo.ioc.container.annotation;
+package org.cxy.springdemo.business.annotation;
 
-
-import org.springframework.stereotype.Indexed;
 
 import java.lang.annotation.*;
 

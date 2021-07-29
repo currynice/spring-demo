@@ -1,7 +1,7 @@
-package org.cxy.springdemo.ioc.container.domain;
+package org.cxy.springdemo.business.domain;
 
 
-import org.cxy.springdemo.ioc.container.annotation.Super;
+import org.cxy.springdemo.business.annotation.Super;
 
 /**
  * 超级用户

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--注册-->
+    <bean name="complexObject" class="org.cxy.springdemo.business.domain.ComplexObject">
+        <!--数组注入，使用 array 子标签-->
+        <property name="names">
+            <array>
+                <value>张三</value>
+                <value>三三来迟</value>
+            </array>
+        </property>
+
+<!--        List注入，使用list子标签-->
+        <property name="tels">
+            <list>
+                <value>110</value>
+                <value>120</value>
+            </list>
+        </property>
+
+
+        <!--        Set注入，使用 set 子标签-->
+        <property name="dogs">
+            <set>
+                <bean  class="org.cxy.springdemo.business.domain.Dog"/>
+                <ref  bean="wangwang"/>
+            </set>
+        </property>
+
+
+<!--        key 和 value都可以是 其他bean的引用-->
+        <property name="events">
+            <map>
+                <entry key="k1" value="v1"/>
+                <entry key="k2" value-ref="wangwang"/>
+                <entry key="k3">
+                    <bean class="org.cxy.springdemo.business.domain.Dog"/>
+                </entry>
+            </map>
+        </property>
+
+<!--        和 Map 基本一样，只不过Properties 的 key 和 value 只能是 String 类型-->
+        <property name="props">
+            <props>
+                <prop key="sex">男</prop>
+                <prop key="age">18</prop>
+            </props>
+        </property>
+
+    </bean>
+
+
+        <bean name="wangwang" class="org.cxy.springdemo.business.domain.Dog"/>
+
+    </beans>
