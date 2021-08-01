@@ -16,7 +16,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class AnnotationConfigApplicationContextDemo {
 
     public static void main(String[] args) {
-        //扫描
+        //扫描 QuickStartConfiguration.class
+        // this();
+        //		register(componentClasses);
+        //		refresh();  启动
         ApplicationContext ctx = new AnnotationConfigApplicationContext(QuickStartConfiguration.class);
 
         //扫描包下标记@Component的Bean
@@ -35,6 +38,9 @@ public class AnnotationConfigApplicationContextDemo {
 
         A a =(A) ctx.getBean("a");
         System.out.println(a);
+
+
+
 
     }
 }
