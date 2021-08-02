@@ -1,4 +1,4 @@
-package org.cxy.springdemo.ioc.container.factoryBean;
+package org.cxy.springdemo.bean.instantiation.factoryBean;
 
 import org.cxy.springdemo.business.domain.Ball;
 import org.cxy.springdemo.business.domain.Car;

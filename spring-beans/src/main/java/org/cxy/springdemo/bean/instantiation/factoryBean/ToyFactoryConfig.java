@@ -1,8 +1,6 @@
-package org.cxy.springdemo.ioc.container.factoryBean;
+package org.cxy.springdemo.bean.instantiation.factoryBean;
 
-import org.cxy.springdemo.business.domain.Ball;
 import org.cxy.springdemo.business.domain.Child;
-import org.cxy.springdemo.business.domain.Toy;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -14,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
  * @version : 1.0 </br>
  */
 @Configuration
-public class ToyFactoryRegistrar {
+public class ToyFactoryConfig {
     @Bean
     public Child child() {
         return new Child();

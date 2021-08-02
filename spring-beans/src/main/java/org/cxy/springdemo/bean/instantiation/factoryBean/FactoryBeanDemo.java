@@ -1,4 +1,4 @@
-package org.cxy.springdemo.ioc.container.factoryBean;
+package org.cxy.springdemo.bean.instantiation.factoryBean;
 
 import org.cxy.springdemo.business.domain.Toy;
 import org.springframework.context.ApplicationContext;
@@ -15,7 +15,8 @@ import java.util.Map;
  */
 public class FactoryBeanDemo {
     public static void main(String[] args) {
-        ApplicationContext ctx = new AnnotationConfigApplicationContext(ToyFactoryRegistrar.class);
+        ApplicationContext ctx = new AnnotationConfigApplicationContext(ToyFactoryConfig.class);
+
 //        Map<String, Toy> toys = ctx.getBeansOfType(Toy.class);
 //        toys.forEach((name, toy) -> {
 //            System.out.println("bean name : " + name + ", " + toy.toString());
