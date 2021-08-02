@@ -1,7 +1,7 @@
-package org.cxy.springdemo.ioc.container.lifecycle;
+package org.cxy.springdemo.bean.lifecycle.springway;
 
 /**
- * Description:   </br>
+ * Description: 用于演示 Spring Bean 的初始化回调  和 销毁回调  </br>
  * Date: 2021/7/30 13:30
  *
  * @author :cxy </br>
@@ -20,6 +20,8 @@ public class DemoBean {
     }
 
     public void setName(String name) {
+
+        System.out.println("setName方法执行了。。。");
         this.name = name;
     }
 

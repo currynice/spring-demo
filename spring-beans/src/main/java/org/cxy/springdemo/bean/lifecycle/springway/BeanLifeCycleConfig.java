@@ -1,4 +1,4 @@
-package org.cxy.springdemo.ioc.container.lifecycle;
+package org.cxy.springdemo.bean.lifecycle.springway;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ImportResource;
  * @version : 1.0 </br>
  */
 @Configuration
-@ImportResource(locations ="classpath:META-INF/bean-lifecycle-context.xml")
+@ImportResource(locations = "classpath:META-INF/bean-lifecycle-context.xml")
 public class BeanLifeCycleConfig {
 
     @Bean(initMethod = "init", destroyMethod = "destroy")

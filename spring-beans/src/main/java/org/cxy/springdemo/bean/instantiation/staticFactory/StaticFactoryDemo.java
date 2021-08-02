@@ -18,5 +18,7 @@ public class StaticFactoryDemo {
         ctx.getBeansOfType(MyBean.class).forEach((beanName, each) -> {
             System.out.println(beanName + " : " + each);
         });
+
+        System.out.println(ctx.getBeansOfType(MyBeanStaticFactory.class).size());
     }
 }
