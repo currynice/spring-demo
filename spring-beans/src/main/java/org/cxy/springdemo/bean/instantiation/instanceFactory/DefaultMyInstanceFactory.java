@@ -8,10 +8,7 @@ package org.cxy.springdemo.bean.instantiation.instanceFactory;
  * @author :cxy </br>
  * @version : 1.0 </br>
  */
-public interface MyInstanceFactory {
+public class DefaultMyInstanceFactory implements MyInstanceFactory{
 
-    default Bean2 getBean2(){
-        return new Bean2();
-    }
 
 }

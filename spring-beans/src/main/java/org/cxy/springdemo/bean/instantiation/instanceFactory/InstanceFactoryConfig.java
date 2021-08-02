@@ -11,12 +11,12 @@ import org.springframework.context.annotation.Bean;
  */
 public class InstanceFactoryConfig {
 
-//    <bean id="myInstanceFactory" class="org.cxy.springdemo.bean.instantiation.instanceFactory.MyInstanceFactory"/>
+//    <bean id="myInstanceFactory" class="org.cxy.springdemo.bean.instantiation.instanceFactory.DefaultMyInstanceFactory"/>
 //    <bean id="bean2" factory-bean="myInstanceFactory" factory-method="getBean2"/>
 
     @Bean
     public MyInstanceFactory myInstanceFactory(){
-        return new MyInstanceFactory();
+        return new DefaultMyInstanceFactory();
     }
 
     @Bean

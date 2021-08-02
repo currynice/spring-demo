@@ -22,6 +22,8 @@
         <junit.version>4.7</junit.version>
         <cglib.version>3.3.0</cglib.version>
         <hutool.version>5.5.0</hutool.version>
+        <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+
     </properties>
 
     <!-- Spring 依赖管理 -->
@@ -91,6 +93,7 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
+                <version>${maven.compiler.plugin.version}</version>
             </plugin>
         </plugins>
 
