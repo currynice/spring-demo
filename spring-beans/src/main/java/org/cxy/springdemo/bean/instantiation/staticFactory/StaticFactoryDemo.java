@@ -1,10 +1,10 @@
-package org.cxy.springdemo.ioc.container.staticFactory;
+package org.cxy.springdemo.bean.instantiation.staticFactory;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * Description: 通过静态工厂创建  </br>
+ * Description: 通过静态工厂创建 Bean  </br>
  * Date: 2021/7/30 11:25
  *
  * @author :cxy </br>

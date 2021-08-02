@@ -1,7 +1,7 @@
-package org.cxy.springdemo.ioc.container.staticFactory;
+package org.cxy.springdemo.bean.instantiation.staticFactory;
 
 /**
- * Description:   </br>
+ * Description: 创建 MyBean   </br>
  * Date: 2021/7/30 11:31
  *
  * @author :cxy </br>

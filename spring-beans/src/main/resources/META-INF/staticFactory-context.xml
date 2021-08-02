@@ -8,8 +8,8 @@
         https://www.springframework.org/schema/context/spring-context.xsd">
 
 
-    <bean id="myBean1" class="org.cxy.springdemo.ioc.container.staticFactory.MyBean"/>
+    <bean id="myBean1" class="org.cxy.springdemo.bean.instantiation.staticFactory.MyBean"/>
 
-    <bean id="myBean2" class="org.cxy.springdemo.ioc.container.staticFactory.MyBeanStaticFactory" factory-method="getBean"/>
+    <bean id="myBean2" class="org.cxy.springdemo.bean.instantiation.staticFactory.MyBeanStaticFactory" factory-method="getBean"/>
 
 </beans>

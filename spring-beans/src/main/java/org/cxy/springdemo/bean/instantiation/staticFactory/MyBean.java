@@ -1,7 +1,7 @@
-package org.cxy.springdemo.ioc.container.staticFactory;
+package org.cxy.springdemo.bean.instantiation.staticFactory;
 
 /**
- * Description:   </br>
+ * Description: 用于演示 静态工厂方式创建 bean  </br>
  * Date: 2021/7/30 11:30
  *
  * @author :cxy </br>
