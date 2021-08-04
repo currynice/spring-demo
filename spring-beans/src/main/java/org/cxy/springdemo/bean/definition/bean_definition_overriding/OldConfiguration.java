@@ -1,4 +1,4 @@
-package org.cxy.springdemo.bean.definition.cover_beandefinition;
+package org.cxy.springdemo.bean.definition.bean_definition_overriding;
 
 import org.cxy.springdemo.bean.beanFactory.listable_bean_factory.Boy;
 import org.springframework.context.annotation.Bean;

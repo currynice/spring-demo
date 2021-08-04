@@ -1,7 +1,6 @@
-package org.cxy.springdemo.bean.definition.cover_beandefinition;
+package org.cxy.springdemo.bean.definition.bean_definition_overriding;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.ImportResource;
 
 /**
  * Description: 演示 ClassPathXml 解析的配置类时  </br>
@@ -21,8 +20,6 @@ public class CoverBeanDefinitionDemo {
      * 通过新的 一个标注 @Configuration 注解的配置类（其中定义了一些 新bean ）以覆盖 旧的 beanDefinition
      */
     public static void coverByConfiguration(){
-//        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(OldConfiguration.class,NewConfiguration.class);
-
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(NewConfiguration.class,OldConfiguration.class);
 
         System.out.println(ctx.getBean("badBoy"));
