@@ -8,4 +8,21 @@ package org.cxy.springdemo.bean.beanFactory.listable_bean_factory;
  * @version : 1.0 </br>
  */
 public class Boy {
+    private Integer version;
+
+
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
+    }
+
+    @Override
+    public String toString() {
+        return "Boy{" +
+                "version=" + version +
+                '}';
+    }
 }
