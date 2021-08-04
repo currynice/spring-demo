@@ -13,6 +13,7 @@
     <modules>
         <module>ioc-container</module>
         <module>spring-beans</module>
+        <module>spring-event</module>
     </modules>
 
     <properties>
