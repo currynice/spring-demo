@@ -1,6 +1,9 @@
 package org.cxy.springdemo.company;
 
+import org.cxy.springdemo.company.annotation.ConditionalOnBean;
 import org.cxy.springdemo.company.annotation.EnableCompany;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -13,4 +16,11 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @EnableCompany
 public class CompanyConfig {
+
+    @Bean
+    @ConditionalOnBean({Boss.class})
+    public BeanNeedBoss beanNeedBoss(){
+        return new BeanNeedBoss();
+    }
+
 }

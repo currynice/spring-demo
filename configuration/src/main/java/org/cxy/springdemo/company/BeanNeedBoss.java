@@ -1,11 +1,11 @@
 package org.cxy.springdemo.company;
 
 /**
- * Description: 经理   </br>
- * Date: 2021/8/5 11:06
+ * Description:   </br>
+ * Date: 2021/8/5 13:23
  *
  * @author :cxy </br>
  * @version : 1.0 </br>
  */
-public class Manager {
+public class BeanNeedBoss {
 }

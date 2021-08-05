@@ -1,6 +1,6 @@
 package org.cxy.springdemo.company.annotation;
 
-import org.cxy.springdemo.company.Boss;
+
 import org.cxy.springdemo.company.EmployeeConfig;
 import org.springframework.context.annotation.ImportSelector;
 import org.springframework.core.type.AnnotationMetadata;
@@ -15,6 +15,8 @@ import org.springframework.core.type.AnnotationMetadata;
 public class CompanyConfigurationSelector implements ImportSelector {
     @Override
     public String[] selectImports(AnnotationMetadata importingClassMetadata) {
-        return new String[] {Boss.class.getName(), EmployeeConfig.class.getName()};
+//        return new String[] {Boss.class.getName(), EmployeeConfig.class.getName()};
+        return new String[] {EmployeeConfig.class.getName()};
+
     }
 }

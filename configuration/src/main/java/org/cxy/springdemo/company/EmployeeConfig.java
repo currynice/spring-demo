@@ -2,6 +2,7 @@ package org.cxy.springdemo.company;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
 /**
  * Description:   </br>
@@ -11,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
  * @version : 1.0 </br>
  */
 @Configuration
+@Profile("working-day")
 public class EmployeeConfig {
 
 
