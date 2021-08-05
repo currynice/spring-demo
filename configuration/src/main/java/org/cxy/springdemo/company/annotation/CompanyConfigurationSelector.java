@@ -1,7 +1,7 @@
-package org.cxy.springdemo.spring_module.company.annotation;
+package org.cxy.springdemo.company.annotation;
 
-import org.cxy.springdemo.spring_module.company.Boss;
-import org.cxy.springdemo.spring_module.company.EmployeeConfig;
+import org.cxy.springdemo.company.Boss;
+import org.cxy.springdemo.company.EmployeeConfig;
 import org.springframework.context.annotation.ImportSelector;
 import org.springframework.core.type.AnnotationMetadata;
 

@@ -1,7 +1,6 @@
-package org.cxy.springdemo.spring_module.company.annotation;
+package org.cxy.springdemo.company.annotation;
 
-import com.sun.deploy.util.Waiter;
-import org.cxy.springdemo.spring_module.company.Manager;
+import org.cxy.springdemo.company.Manager;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.RootBeanDefinition;
 import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;

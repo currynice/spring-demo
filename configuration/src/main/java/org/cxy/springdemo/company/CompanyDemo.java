@@ -1,7 +1,6 @@
-package org.cxy.springdemo.spring_module.company;
+package org.cxy.springdemo.company;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Import;
 
 import java.util.stream.Stream;
 

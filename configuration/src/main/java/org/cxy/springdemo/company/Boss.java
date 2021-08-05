@@ -1,4 +1,4 @@
-package org.cxy.springdemo.spring_module.company;
+package org.cxy.springdemo.company;
 
 /**
  * Description:   </br>

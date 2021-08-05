@@ -1,4 +1,4 @@
-package org.cxy.springdemo.spring_module.company;
+package org.cxy.springdemo.company;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

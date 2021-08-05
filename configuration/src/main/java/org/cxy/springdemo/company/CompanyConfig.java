@@ -1,6 +1,6 @@
-package org.cxy.springdemo.spring_module.company;
+package org.cxy.springdemo.company;
 
-import org.cxy.springdemo.spring_module.company.annotation.EnableCompany;
+import org.cxy.springdemo.company.annotation.EnableCompany;
 import org.springframework.context.annotation.Configuration;
 
 /**
