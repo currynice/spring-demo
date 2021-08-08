@@ -15,6 +15,7 @@
         <module>spring-beans</module>
         <module>spring-event</module>
         <module>configuration</module>
+        <module>dependency-lookup</module>
     </modules>
 
     <properties>
