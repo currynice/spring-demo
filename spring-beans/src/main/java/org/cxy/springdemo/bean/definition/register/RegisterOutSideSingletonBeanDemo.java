@@ -3,8 +3,10 @@ package org.cxy.springdemo.bean.definition.register;
 import org.springframework.beans.factory.config.SingletonBeanRegistry;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.Arrays;
+
 /**
- * Description: 外部单体Bean注册演示
+ * Description: 外部单体Bean手动注册演示
 
  *
  * 将一个已经实例化，初始化好的 外部 Bean 注册到Spring 容器
@@ -32,6 +34,14 @@ public class RegisterOutSideSingletonBeanDemo {
 
 
         System.out.println("whether outSideBean == outside ?" + (outSideBean == configApplicationContext.getBean("outside")));
+
+
+        //（ getBeanNamesOfType 和 getBeansOfType 方法除外）
+        System.out.println("getBeanNamesOfType可以获得外部bean"+Arrays.toString(configApplicationContext.getBeanNamesForType(OutSideBean.class)));
+
+
+        System.out.println("getBeansOfType可以获得外部bean"+ configApplicationContext.getBeansOfType(OutSideBean.class));
+
 
         configApplicationContext.close();
 

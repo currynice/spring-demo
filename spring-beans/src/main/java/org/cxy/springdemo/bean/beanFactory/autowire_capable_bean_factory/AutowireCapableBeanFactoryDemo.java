@@ -19,6 +19,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class AutowireCapableBeanFactoryDemo {
 
 
+    /**
+     * 两种方式 获取的是同一个
+     * @param args
+     */
     public static void main(String[] args) {
 //        getAutowireCapableBeanFactoryByBeanFactoryAware();
         getAutowireCapableBeanFactoryInApplicationContext();
