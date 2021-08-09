@@ -12,11 +12,14 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  */
 public class CallBackInjectionDemo {
 
+
     public static void main(String[] args) throws Exception {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(AwaredTestBeanConfig.class);
         AwaredTestBean bean = ctx.getBean(AwaredTestBean.class);
 //        bean.printBeanNames();
 //        System.out.println("xxxxxxx");
-        bean.printMyBeanName();
+        bean.print();
+
+
     }
 }

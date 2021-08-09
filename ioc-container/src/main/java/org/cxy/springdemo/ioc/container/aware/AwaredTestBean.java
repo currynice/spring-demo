@@ -4,7 +4,10 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.EnvironmentAware;
+import org.springframework.core.env.Environment;
 
+import java.util.Arrays;
 import java.util.stream.Stream;
 
 /**
@@ -15,11 +18,14 @@ import java.util.stream.Stream;
  * @author :cxy </br>
  * @version : 1.0 </br>
  */
-public class AwaredTestBean implements ApplicationContextAware, BeanNameAware {
+public class AwaredTestBean implements ApplicationContextAware, BeanNameAware, EnvironmentAware {
 
     private ApplicationContext ctx;
 
     private String myBeanName;
+
+    private Environment environment;
+
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
@@ -27,18 +33,32 @@ public class AwaredTestBean implements ApplicationContextAware, BeanNameAware {
     }
 
 
-    //打印 ctx的所有 bean id
-    public void printBeanNames() {
-        Stream.of(ctx.getBeanDefinitionNames()).forEach(System.out::println);
-    }
 
-    //打印当前bean 的id
-    public void printMyBeanName() {
+    public void print() {
+        //打印 ctx 定义 的所有的  bean id
+        System.out.println("打印 ctx 定义 的所有的 bean-Name");
+        Stream.of(ctx.getBeanDefinitionNames()).forEach(System.out::println);
+
+        //打印当前bean 的id
+        System.out.println("打印当前的 bean-Name");
         System.out.println(myBeanName);
+
+        //打印当前bean 的id
+        System.out.println("runtime-getDefaultProfiles");
+        System.out.println(Arrays.toString(environment.getDefaultProfiles()));
+        System.out.println("runtime-getActiveProfiles");
+        System.out.println(Arrays.toString(environment.getActiveProfiles()));
+
     }
 
     @Override
     public void setBeanName(String name) {
         myBeanName = name;
+    }
+
+
+    @Override
+    public void setEnvironment(Environment environment) {
+        this.environment = environment;
     }
 }
