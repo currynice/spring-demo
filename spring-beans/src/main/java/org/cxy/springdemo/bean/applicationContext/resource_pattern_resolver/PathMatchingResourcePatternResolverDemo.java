@@ -3,7 +3,7 @@ package org.cxy.springdemo.bean.applicationContext.resource_pattern_resolver;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 /**
- * Description:   </br>
+ * Description: 一个独立实现，根据特殊路径返回匹配到的资源。可以在ApplicationContext 外单独使用。  </br>
  * Date: 2021/8/4 11:18
  *
  * @author :cxy </br>

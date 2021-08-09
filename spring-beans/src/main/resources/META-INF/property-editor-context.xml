@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--必须延迟实例化、因为 ApplicationContext 默认是会将所有的非 lazy 的 bean 实例化、
+    而这时 PropertyEditor 还没有注册进去,会报错-->
+    <bean class="org.cxy.springdemo.bean.applicationContext.resource_pattern_resolver.Job" id="job" lazy-init="true">
+        <property name="completed" value="对" />
+    </bean>
+
+</beans>
