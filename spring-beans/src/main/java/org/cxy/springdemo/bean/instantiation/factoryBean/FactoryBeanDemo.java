@@ -4,6 +4,7 @@ import org.cxy.springdemo.business.domain.Toy;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.Arrays;
 import java.util.Map;
 
 /**
@@ -16,10 +17,12 @@ import java.util.Map;
 public class FactoryBeanDemo {
     public static void main(String[] args) {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(ToyFactoryConfig.class);
+//        System.out.println(Arrays.toString(ctx.getBeanDefinitionNames()));
+        Map<String, Toy> toys = ctx.getBeansOfType(Toy.class);
+        toys.forEach((name, toy) -> {
+            System.out.println("bean name : " + name + ", " + toy.toString());
+        });
 
-//        Map<String, Toy> toys = ctx.getBeansOfType(Toy.class);
-//        toys.forEach((name, toy) -> {
-//            System.out.println("bean name : " + name + ", " + toy.toString());
-//        });
+
     }
 }
