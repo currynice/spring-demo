@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="byNameBean" class="org.cxy.springdemo.dependency.inject.autowire.ByNameBean" autowire="byName"/>
+
+
+    <bean id="byTypeBean" class="org.cxy.springdemo.dependency.inject.autowire.ByTypeBean" autowire="byType"/>
+
+    <bean id="byTypeBean2" class="org.cxy.springdemo.dependency.inject.autowire.ByTypeBean2" autowire="byType"/>
+
+
+    <bean id="constructorBean" class="org.cxy.springdemo.dependency.inject.autowire.ByConstructionBean" autowire="constructor"/>
+
+
+
+</beans>
