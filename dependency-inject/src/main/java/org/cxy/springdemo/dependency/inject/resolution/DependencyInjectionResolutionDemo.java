@@ -21,20 +21,20 @@ import org.cxy.springdemo.business.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.context.annotation.*;
+
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
 /**
- * 注解驱动的依赖注入处理过程
+ * 依赖注入处理过程
  *
  * @since
  */
 @Configuration
 public class DependencyInjectionResolutionDemo {
 
-    @Autowired          // 依赖查找（处理） + 延迟
-    @Lazy
-    private User lazyUser;
+
 
     // DependencyDescriptor ->
     // 必须（required=true）
@@ -42,11 +42,15 @@ public class DependencyInjectionResolutionDemo {
     // 通过类型（User.class）
     // 字段名称（"user"）
     // 是否首要（primary = true)
-    @Autowired          // 依赖查找（处理）
+    @Autowired          // 依赖查找（处理），找到 root
     private User user;
 
-//    @Autowired          // 集合类型依赖注入
-//    private Map<String, User> users; // user superUser
+//    @Autowired          // 依赖查找（处理） + 延迟
+//    @Lazy
+//    private User lazyUser;
+
+    @Autowired          // 集合类型依赖注入
+    private List<User> users; // user superUser
 //
 //    @Autowired
 //    private Optional<User> userOptional; // superUser
@@ -66,13 +70,13 @@ public class DependencyInjectionResolutionDemo {
 
     public static void main(String[] args) {
 
-        // 创建 BeanFactory 容器
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
-        // 注册 Configuration Class（配置类） -> Spring Bean
+        // 注册 Configuration Class（配置类)
         applicationContext.register(DependencyInjectionResolutionDemo.class);
 
         XmlBeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReader(applicationContext);
 
+        //定义了 root ,user 两个bean
         String xmlResourcePath = "classpath:/META-INF/dependency-lookup-context.xml";
         // 加载 XML 资源，解析并且生成 BeanDefinition
         beanDefinitionReader.loadBeanDefinitions(xmlResourcePath);
@@ -83,15 +87,11 @@ public class DependencyInjectionResolutionDemo {
         // 依赖查找 DependencyInjectionResolutionDemo Bean
         DependencyInjectionResolutionDemo demo = applicationContext.getBean(DependencyInjectionResolutionDemo.class);
 
-        // 期待输出 superUser Bean
+        // 期待输出 root Bean
         System.out.println("demo.user = " + demo.user);
 
 
-        // 期待输出 user superUser
-        System.out.println("demo.users = " + demo.users);
-        // 期待输出 superUser Bean
-        System.out.println("demo.userOptional = " + demo.userOptional);
-
+        System.out.println("demo.user = " + demo.users);
 
 
         // 显示地关闭 Spring 应用上下文
