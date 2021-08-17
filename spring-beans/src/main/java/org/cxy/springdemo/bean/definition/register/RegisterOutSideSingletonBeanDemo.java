@@ -35,8 +35,10 @@ public class RegisterOutSideSingletonBeanDemo {
 
         System.out.println("whether outSideBean == outside ?" + (outSideBean == configApplicationContext.getBean("outside")));
 
+        System.out.println("查找所有BeanDefinition，是否包含outside ？" + Arrays.asList(configApplicationContext.getBeanDefinitionNames()).contains("outside"));
 
-        //（ getBeanNamesOfType 和 getBeansOfType 方法除外）
+
+        //（ getBeanNamesOfType 和 getBeansOfType 方法除外,你真想找还是能找得到的，只是这些一般都是Spring的内建Bean，不希望开发者使用。。。）
         System.out.println("getBeanNamesOfType可以获得外部bean"+Arrays.toString(configApplicationContext.getBeanNamesForType(OutSideBean.class)));
 
 
