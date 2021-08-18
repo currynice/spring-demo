@@ -30,6 +30,7 @@ public class RegisterOutSideSingletonBeanDemo {
 
         SingletonBeanRegistry singletonBeanRegistry = configApplicationContext.getBeanFactory();
 
+        //单例对象能在 IoC 容器启动后注册
         singletonBeanRegistry.registerSingleton("outside",outSideBean);
 
 
