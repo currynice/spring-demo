@@ -14,12 +14,26 @@ import org.springframework.context.annotation.Scope;
  * @version : 1.0 </br>
  */
 @Configuration
-public class PrototypeBeanConfig {
+public class BrushBeanConfig {
 
-    @Bean(initMethod = "initMethod", destroyMethod = "destroyMethod")
+    // 默认 scope 就是 "singleton"
+    @Bean
+    public Brush singletonBrush() {
+        return createBrush();
+    }
+
+    @Bean
     @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-    public Brush brush() {
-        return new Brush();
+    public Brush prototypeBrush() {
+        return createBrush();
+    }
+
+
+
+    private static Brush createBrush() {
+        Brush brush = new Brush();
+        brush.setTime(System.nanoTime());
+        return brush;
     }
 
 }

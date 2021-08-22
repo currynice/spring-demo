@@ -1,29 +1,48 @@
 package org.cxy.springdemo.bean.lifecycle.prototypeBean;
 
+import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 
-public class Brush {
+public class Brush implements BeanNameAware {
 
-    private Integer ink;
+    private Long time;
 
+    //避免序列化，反序列化
+    private transient String beanName;
 
+    @PostConstruct
     public void initMethod() {
-        System.out.println("initMethod。。。");
-
-        this.ink = 100;
+        System.out.println(beanName+"init。。。");
+        this.time = 100L;
     }
 
+    @PreDestroy
     public void destroyMethod() {
-        System.out.println("destroyMethod。。。");
-        this.ink = 0;
+        System.out.println(beanName+"destroy。。。");
+        this.time = 0L;
+    }
+
+
+
+    public Long getTime() {
+        return time;
+    }
+
+    public void setTime(Long time) {
+        this.time = time;
     }
 
     @Override
     public String toString() {
-        return "Pen{" + "ink=" + ink + '}';
+        return "Brush{" + "time=" + time + '}'+"@" + Integer.toHexString(hashCode());
+    }
+
+    @Override
+    public void setBeanName(String name) {
+        this.beanName = name;
     }
 }
