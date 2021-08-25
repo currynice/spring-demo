@@ -1,6 +1,6 @@
 package org.cxy.springdemo.bean.applicationContext.resource_pattern_resolver;
 
-import com.sun.istack.internal.Nullable;
+import org.springframework.lang.Nullable;
 import org.springframework.util.StringUtils;
 
 import java.beans.PropertyEditor;

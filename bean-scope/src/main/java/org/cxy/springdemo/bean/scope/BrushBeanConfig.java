@@ -1,4 +1,4 @@
-package org.cxy.springdemo.bean.lifecycle.prototypeBean;
+package org.cxy.springdemo.bean.scope;
 
 
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;

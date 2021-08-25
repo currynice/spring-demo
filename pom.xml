@@ -18,6 +18,7 @@
         <module>dependency-lookup</module>
         <module>dependency-inject</module>
         <module>dependency-source</module>
+        <module>bean-scope</module>
     </modules>
 
     <properties>

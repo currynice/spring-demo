@@ -1,7 +1,6 @@
-package org.cxy.springdemo.bean.lifecycle.prototypeBean;
+package org.cxy.springdemo.bean.scope;
 
 import org.springframework.beans.factory.BeanNameAware;
-import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
