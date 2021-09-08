@@ -1,4 +1,4 @@
-package org.cxy.springdemo.bean.lifecycle.lazyInit;
+package org.cxy.springdemo.bean.initAndDestory.lazyInit;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
  * @version : 1.0 </br>
  */
 @Configuration
-@ComponentScan("org.cxy.springdemo.bean.lifecycle.lazyInit")
+@ComponentScan("org.cxy.springdemo.bean.initAndDestory.lazyInit")
 public class LazyInitDemo {
 
     public static void main(String[] args) {

@@ -1,6 +1,5 @@
-package org.cxy.springdemo.bean.lifecycle.spring_api;
+package org.cxy.springdemo.bean.initAndDestory.spring_api;
 
-import org.cxy.springdemo.bean.lifecycle.jsr250.Pen;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.Map;

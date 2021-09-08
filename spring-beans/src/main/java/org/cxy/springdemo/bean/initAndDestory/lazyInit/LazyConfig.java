@@ -1,4 +1,4 @@
-package org.cxy.springdemo.bean.lifecycle.lazyInit;
+package org.cxy.springdemo.bean.initAndDestory.lazyInit;
 
 /**
  * Description:   </br>

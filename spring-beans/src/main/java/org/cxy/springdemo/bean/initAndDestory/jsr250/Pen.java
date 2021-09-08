@@ -1,4 +1,4 @@
-package org.cxy.springdemo.bean.lifecycle.jsr250;
+package org.cxy.springdemo.bean.initAndDestory.jsr250;
 
 import org.springframework.stereotype.Component;
 

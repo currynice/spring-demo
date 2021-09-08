@@ -1,6 +1,7 @@
-package org.cxy.springdemo.bean.lifecycle.springway;
+package org.cxy.springdemo.bean.initAndDestory.jsr250;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 import java.util.Map;
 
 /**
@@ -10,7 +11,7 @@ import java.util.Map;
  * @author :cxy </br>
  * @version : 1.0 </br>
  */
-public class BeanLifeCycleDemo {
+public class BeanLifeCycleJSR250Demo {
 
     public static void main(String[] args) {
 
@@ -18,8 +19,8 @@ public class BeanLifeCycleDemo {
         /**
          * 使用实现类, 目的是为了调用 close 方法对容器进行关闭(ApplicationContext 没有)，以触发 Bean 的销毁动作。
          */
-        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(BeanLifeCycleConfig.class);
-        Map<String, DemoBean> demoBeanMap = ctx.getBeansOfType(DemoBean.class);
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext("org.cxy.springdemo.bean.lifecycle.jsr250");
+        Map<String, Pen> demoBeanMap = ctx.getBeansOfType(Pen.class);
         demoBeanMap.forEach((beanName, bean) -> {
             System.out.println(beanName + " : " + bean);
         });

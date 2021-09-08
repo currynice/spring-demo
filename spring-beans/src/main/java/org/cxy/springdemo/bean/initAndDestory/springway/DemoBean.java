@@ -1,4 +1,4 @@
-package org.cxy.springdemo.bean.lifecycle.springway;
+package org.cxy.springdemo.bean.initAndDestory.springway;
 
 /**
  * Description: 用于演示 Spring Bean 的初始化回调  和 销毁回调  </br>

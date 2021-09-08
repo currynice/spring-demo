@@ -1,4 +1,4 @@
-package org.cxy.springdemo.bean.lifecycle.spring_api;
+package org.cxy.springdemo.bean.initAndDestory.spring_api;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

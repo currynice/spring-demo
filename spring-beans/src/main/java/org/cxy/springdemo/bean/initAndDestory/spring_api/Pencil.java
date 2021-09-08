@@ -1,8 +1,7 @@
-package org.cxy.springdemo.bean.lifecycle.spring_api;
+package org.cxy.springdemo.bean.initAndDestory.spring_api;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;

@@ -9,7 +9,7 @@
 
 
 
-    <bean id="demoBean1" class="org.cxy.springdemo.bean.lifecycle.springway.DemoBean" init-method="init" destroy-method="destroy">
+    <bean id="demoBean1" class="org.cxy.springdemo.bean.initAndDestory.springway.DemoBean" init-method="init" destroy-method="destroy">
           <property name="name" value="cxy"/>
     </bean>
 

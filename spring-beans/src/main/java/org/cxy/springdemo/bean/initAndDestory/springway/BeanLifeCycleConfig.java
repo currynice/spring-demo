@@ -1,4 +1,4 @@
-package org.cxy.springdemo.bean.lifecycle.springway;
+package org.cxy.springdemo.bean.initAndDestory.springway;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
