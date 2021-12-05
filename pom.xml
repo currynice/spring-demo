@@ -19,7 +19,7 @@
         <module>dependency-inject</module>
         <module>dependency-source</module>
         <module>bean-scope</module>
-        <module>configuration-metadata</module>
+        <module>spring-aop</module>
     </modules>
 
     <properties>
@@ -46,7 +46,7 @@
 
             <dependency>
                 <groupId>org.springframework</groupId>
-                <artifactId>spring-aop</artifactId>
+                <artifactId>spring-aspects</artifactId>
                 <version>${spring.version}</version>
             </dependency>
 

@@ -19,7 +19,7 @@ public class BeanLifeCycleJSR250Demo {
         /**
          * 使用实现类, 目的是为了调用 close 方法对容器进行关闭(ApplicationContext 没有)，以触发 Bean 的销毁动作。
          */
-        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext("org.cxy.springdemo.bean.lifecycle.jsr250");
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext("org.cxy.springdemo.bean.initAndDestory.jsr250");
         Map<String, Pen> demoBeanMap = ctx.getBeansOfType(Pen.class);
         demoBeanMap.forEach((beanName, bean) -> {
             System.out.println(beanName + " : " + bean);
